@@ -1,0 +1,51 @@
+{
+  "name": "cobwebfx/verify-signature",
+  "type": "library",
+  "description": "Verifies Signature",
+  "keywords": [
+    "Cobwebfx",
+    "VerifySignature"
+  ],
+  "homepage": "https://github.com/Cobwebfx/VerifySignature",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Cobwebfx",
+      "email": "jamie.potter@dm-companies.com",
+      "homepage": "http://www.cobwebfx.co.uk",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "~5.6|~7.0",
+    "firebase/php-jwt": "^5.0",
+    "illuminate/http": "^5.5"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.3",
+    "phpunit/phpunit": "^6.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Cobwebfx\\VerifySignature\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Cobwebfx\\VerifySignature\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+    "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
